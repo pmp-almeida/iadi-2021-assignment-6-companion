@@ -34,7 +34,12 @@ class SecurityApplication(
         users.save(u2)
 
         val a1 = AuthorDAO(0,"Philip K. Dick")
-        authors.save(a1)
+        val a2 = AuthorDAO(0,"João Costa Seco")
+        val a3 = AuthorDAO(0,"Artur Miguel Dias")
+        val a4 = AuthorDAO(0,"João Leitão")
+        val a5 = AuthorDAO(0, "José Legatheaux Martins")
+
+        authors.saveAll(listOf(a1, a2, a3, a4, a5))
 
         val b1 = BookDAO(0,"Ubik", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/9251896-L.jpg")))
         val b2 = BookDAO(0,"Do Androids Dream of Electric Sheep?", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/11153217-L.jpg")))

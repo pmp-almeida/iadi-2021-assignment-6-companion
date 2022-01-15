@@ -22,4 +22,13 @@ class AuthorService(val authors:AuthorRepository) {
     fun deleteOne(id:Long) { authors.deleteById(id) }
 
     fun getCount() : Number { return authors.getCount() }
+
+    fun updateOne(id:Long, author: AuthorDAO): AuthorDAO {
+        val maybeAuthor = authors.findById(id)
+
+        val a = maybeAuthor.orElseThrow { NoAuthorException("Author with ${id} was not found") }
+        a.name = author.name
+
+        return authors.save(a)
+    }
 }

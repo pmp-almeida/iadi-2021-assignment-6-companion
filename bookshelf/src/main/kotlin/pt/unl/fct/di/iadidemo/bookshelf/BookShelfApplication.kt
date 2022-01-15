@@ -40,8 +40,12 @@ class SecurityApplication(
         val a5 = AuthorDAO(0, "José Legatheaux Martins")
         val a6 = AuthorDAO(0, "Colleen Hoover");
         val a7 = AuthorDAO(0, "Madeline Miller");
+        val a8 = AuthorDAO(0, "Dummy1");
+        val a9 = AuthorDAO(0, "Dummy2");
+        val a10 = AuthorDAO(0, "Dummy3");
+        val a11 = AuthorDAO(0, "Dummy4");
 
-        authors.saveAll(listOf(a1, a2, a3, a4, a5, a6, a7))
+        authors.saveAll(listOf(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11))
 
         val b1 = BookDAO(0,"Ubik", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/9251896-L.jpg")))
         val b2 = BookDAO(0,"Do Androids Dream of Electric Sheep?", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/11153217-L.jpg")))

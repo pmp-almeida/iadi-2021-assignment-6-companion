@@ -20,12 +20,12 @@ data class BookDAO(
 
 @Entity
 data class AuthorDAO(
-    @Id @GeneratedValue
+        @Id @GeneratedValue
     val id:Long,
 
-    val name:String,
+        var name:String,
 
-    )
+        )
 
 @Entity
 data class ImageDAO(

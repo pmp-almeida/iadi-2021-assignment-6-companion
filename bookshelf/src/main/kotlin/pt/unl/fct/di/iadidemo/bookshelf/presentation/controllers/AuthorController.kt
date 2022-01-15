@@ -54,7 +54,12 @@ class AuthorController(val authors: AuthorService) : AuthorAPI {
 
     @CanSeeAuthors
     override fun updateOne(id: Long, elem: AuthorsBookDTO):AuthorDTO {
-        TODO("Not yet implemented")
+        return authors.updateOne(id, AuthorDAO(0, elem.name)).let {
+            AuthorDTO(
+                    it.id,
+                    it.name
+            )
+        }
     }
 
     @CanSeeAuthors

@@ -62,4 +62,6 @@ class AuthorController(val authors: AuthorService) : AuthorAPI {
         authors.deleteOne(id)
     }
 
+    @CanSeeAuthors
+    override fun getCount() : Number { return authors.getCount() }
 }

@@ -38,22 +38,24 @@ class SecurityApplication(
         val a3 = AuthorDAO(0,"Artur Miguel Dias")
         val a4 = AuthorDAO(0,"João Leitão")
         val a5 = AuthorDAO(0, "José Legatheaux Martins")
+        val a6 = AuthorDAO(0, "Colleen Hoover");
+        val a7 = AuthorDAO(0, "Madeline Miller");
 
-        authors.saveAll(listOf(a1, a2, a3, a4, a5))
+        authors.saveAll(listOf(a1, a2, a3, a4, a5, a6, a7))
 
         val b1 = BookDAO(0,"Ubik", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/9251896-L.jpg")))
         val b2 = BookDAO(0,"Do Androids Dream of Electric Sheep?", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/11153217-L.jpg")))
         val b3 = BookDAO(0,"The Man in the High Castle", mutableListOf(a1), listOf(ImageDAO(0, "https://covers.openlibrary.org/b/id/10045188-L.jpg")))
 
-        val b4 = BookDAO(0,"Ubik", mutableListOf(a1), listOf(ImageDAO(0, "https://sm.ign.com/ign_br/screenshot/default/harry-potter-hbo-max_q8yn.jpg")))
-        val b5 = BookDAO(0,"Do Androids Dream of Electric Sheep?", mutableListOf(a1), listOf(ImageDAO(0, "https://exame.com/wp-content/uploads/2019/07/untitled-5-2.png")))
-        val b6 = BookDAO(0,"The Man in the High Castle", mutableListOf(a1), listOf(ImageDAO(0, "https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg")))
+        val b4 = BookDAO(0,"It Ends With Us", mutableListOf(a2), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4711/9781471156267.jpg")))
+        val b5 = BookDAO(0,"Ugly Love", mutableListOf(a2), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4711/9781471136726.jpg")))
+        val b6 = BookDAO(0,"Confess", mutableListOf(a3), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4711/9781471148590.jpg")))
 
-        val b7 = BookDAO(0,"Ubik", mutableListOf(a1), listOf(ImageDAO(0, "https://static.globalnoticias.pt/dn/image.jpg?brand=DN&type=generate&guid=454e5789-8c37-4e1e-95b3-39529dad3740&w=800&h=450&t=20211117100639")))
-        val b8 = BookDAO(0,"Do Androids Dream of Electric Sheep?", mutableListOf(a1), listOf(ImageDAO(0, "https://t.ctcdn.com.br/w648g5hnt0u3-OvYjGE2l3OT0Fs=/512x288/smart/i525540.jpeg")))
-        val b9 = BookDAO(0,"The Man in the High Castle", mutableListOf(a1), listOf(ImageDAO(0, "https://sm.ign.com/t/ign_br/news/h/heres-our-/heres-our-first-look-at-harry-potter-20th-anniversary-return_8y39.620.jpg")))
+        val b7 = BookDAO(0,"The Hating Game", mutableListOf(a1), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/3494/9780349414263.jpg")))
+        val b8 = BookDAO(0,"The Love Hypothesis", mutableListOf(a1), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/5933/9780593336823.jpg")))
+        val b9 = BookDAO(0,"Verity", mutableListOf(a6), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/5387/9781538724736.jpg")))
 
-        val b10 = BookDAO(0,"The Man in the High Castle", mutableListOf(a1), listOf(ImageDAO(0, "https://sm.ign.com/t/ign_br/news/h/heres-our-/heres-our-first-look-at-harry-potter-20th-anniversary-return_8y39.620.jpg")))
+        val b10 = BookDAO(0,"The Song of Achilles", mutableListOf(a7), listOf(ImageDAO(0, "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408891384.jpg")))
 
         books.saveAll(listOf(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10))
     }

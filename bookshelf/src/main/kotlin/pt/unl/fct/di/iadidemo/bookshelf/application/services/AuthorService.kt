@@ -21,4 +21,5 @@ class AuthorService(val authors:AuthorRepository) {
 
     fun deleteOne(id:Long) { authors.deleteById(id) }
 
+    fun getCount() : Number { return authors.getCount() }
 }

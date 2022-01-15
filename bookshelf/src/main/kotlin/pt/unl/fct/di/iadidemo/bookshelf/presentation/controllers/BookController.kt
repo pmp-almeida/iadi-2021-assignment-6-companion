@@ -84,4 +84,7 @@ class BookController(val books: BookService, val authors: AuthorService) : Books
 
         @CanDeleteBook
         override fun deleteOne(id: Long) { books.deleteOne(id) }
+
+        @CanSeeBook
+        override fun getCount() : Number { return books.getCount() }
 }

@@ -16,15 +16,23 @@ limitations under the License.
 
 package pt.unl.fct.di.iadidemo.bookshelf.domain
 
+import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 import org.springframework.data.repository.PagingAndSortingRepository
 
 interface UserRepository : PagingAndSortingRepository<UserDAO, String>
 
-interface BookRepository : PagingAndSortingRepository<BookDAO, Long>
+interface BookRepository : PagingAndSortingRepository<BookDAO, Long> {
+    @Query("select count(b) from BookDAO b")
+    fun getCount(): Long
+}
 
 interface RoleRepository : CrudRepository<RoleDAO, String>
 
-interface AuthorRepository : CrudRepository<AuthorDAO, Long>
+interface AuthorRepository : CrudRepository<AuthorDAO, Long> {
+    @Query("select count(a) from AuthorDAO a")
+    fun getCount(): Long
+}
+
 
 interface SessionRepository : CrudRepository<SessionDAO, Long>

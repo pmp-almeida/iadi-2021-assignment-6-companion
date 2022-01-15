@@ -4,4 +4,8 @@ import org.springframework.web.bind.annotation.*
 import pt.unl.fct.di.iadidemo.bookshelf.presentation.api.dto.*
 
 @RequestMapping("authors")
-interface AuthorAPI : GenAPI<AuthorsBookDTO, AuthorDTO, AuthorDTO>
+interface AuthorAPI : GenAPI<AuthorsBookDTO, AuthorDTO, AuthorDTO> {
+
+    @GetMapping("count")
+    fun getCount():Number
+}

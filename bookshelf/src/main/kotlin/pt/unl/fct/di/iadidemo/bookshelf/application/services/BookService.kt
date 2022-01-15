@@ -44,4 +44,5 @@ class BookService(val books: BookRepository) {
 
     fun deleteOne(id:Long) { books.deleteById(id) }
 
+    fun getCount() : Number { return books.getCount() }
 }
